@@ -1,19 +1,18 @@
-# NFT_server
+# node_server
 Back-end application to fetch token metadata from a Solana wallet.
 
-1/ Create a .env file and fill in the following variable:  
-SOLANA_NETWORK=
+1/ run `npm install` in the root directory.
 
-2/ run `npm install` in the root directory.
-
-3/ run `nodemon` to start the development server.
-
-4/ Send back-end post requests to http://localhost:5000/getTokens from your front-end setup, include the pubKey string in request's body.
-
-5/ Deploy site on a hosting service like Heroku.
+2/ run `nodemon` to start the development server.
 
 # Features:  
 - Metadata fetching
+- 
+# Client App:  
+- Metadata fetching
 
-# Related video tutorials:  
-- Upcoming
+1/ run `cd client`
+
+2/ run `npm install`
+
+3/ run `npm start` to start the react server
