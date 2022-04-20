@@ -1,3 +1,7 @@
+<h1> Registration and Login Solana app for NFT </h1>
+
+<h2> Fetch NFT from wallet against CheemsArena NFTs </h2>
+
 # node_server
 Back-end application to fetch token metadata from a Solana wallet.
 
@@ -7,9 +11,10 @@ Back-end application to fetch token metadata from a Solana wallet.
 
 # Features:  
 - Metadata fetching
-- 
+
+
 # Client App:  
-- Metadata fetching
+- Display NFT
 
 1/ run `cd client`
 
