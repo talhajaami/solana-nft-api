@@ -1,6 +1,7 @@
 import tokenController from "./tokenController.js";
 import con from '../config/db.js'
 import bcrypt from 'bcryptjs'
+import jwt from 'jsonwebtoken'
 
 const apiController={
     getTokens: async (req, res) => {
@@ -28,6 +29,16 @@ const apiController={
                         return res.status(400).json({ message: "Error. Please connect wallet and send pubKey to verify." });
                     }
 
+                    const payload = {
+                        username, 
+                        password
+                      };
+                
+                     const token =  jwt.sign(
+                        payload,
+                        "thisissecretkey",
+                        { expiresIn: '1 day' },
+                      );
                     // get metadata against public key
                     let metaDataArray=await tokenController.getMetaData(pubKey);
 
@@ -35,6 +46,7 @@ const apiController={
                         pubKey,
                         data: metaDataArray,
                         message: "Token metaData found in user wallet.",
+                        token
                     };
                     res.json(response);
                 } else {
